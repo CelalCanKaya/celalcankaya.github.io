@@ -1,0 +1,71 @@
+body {
+      background-image:url(images/bg.png);
+      background-repeat:no-repeat;
+      background-size: cover;
+   }
+
+.topic {
+	font-size: 48px;
+	font-family: Monospace;
+	/font-style: Italic;
+	text-align:center;
+	font-weight: bold;
+	padding: 20 0 0 0;
+}
+
+.welcome{
+	font-size: 18px;
+	font-family: Monospace;
+	font-weight: Bold;}
+
+.interests{font-size: 48px;
+	font-family: Monospace;
+	/font-style: Italic;
+	font-weight: bold;}
+
+h2{
+	font-family: Monospace;
+	/font-style: Italic;
+	text-align:center
+}	
+
+
+hr {
+	border-color:Red;
+}
+
+.pp{
+background-image: url("images/pp.jpg");
+background-color: Blue;
+background-repeat:no-repeat;
+border-radius: 100px;
+width:150px;
+height:150px;
+}
+
+table {
+    width:100%;
+    margin:50 0 0 0;
+    }
+
+td {
+
+font-family: Monospace;
+font-size: 32;
+padding:8;
+
+}
+
+.interests {
+
+font-family: Monospace;
+font-size: 32;
+font-weight: normal;
+padding:8;
+
+}
+
+a:link {text-decoration: none; display:block;}
+a:visited {text-decoration: none;}
+a:hover {text-decoration: none; font-weight: bold; background-color:#E6F8E0; border-radius:10px}
+a:active {text-decoration: none;}
