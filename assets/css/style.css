@@ -4,29 +4,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap");
 
 :root {
-  --bg: #fffdf7;
-  --surface: #ffffff;
-  --text: #14151a;
-  --muted: #6b6f7a;
-  --border: #14151a;
-  --shadow: #14151a;
+  --bg: #14151a;
+  --surface: #1e2029;
+  --text: #f5f5f2;
+  --muted: #a3a8b5;
+  --border: #f5f5f2;
+  --shadow: #ff5c8a;
   --yellow: #f7d046;
   --pink: #ff5c8a;
   --green: #45d19a;
   --cyan: #55c2ff;
   --radius: 18px;
   --border-w: 3px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #14151a;
-    --surface: #1e2029;
-    --text: #f5f5f2;
-    --muted: #a3a8b5;
-    --border: #f5f5f2;
-    --shadow: #ff5c8a;
-  }
 }
 
 * {
