@@ -84,13 +84,6 @@ a {
   text-decoration: none;
 }
 
-.brand img {
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  border: 2px solid var(--border);
-}
-
 /* ---- Neo-brutalist card ---- */
 .card {
   background: var(--surface);
@@ -163,14 +156,6 @@ a {
 
 .app-row + .app-row {
   border-top: 2px dashed color-mix(in srgb, var(--border) 30%, transparent);
-}
-
-.app-row img {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
-  border: 2px solid var(--border);
-  flex-shrink: 0;
 }
 
 .app-row .meta {
@@ -300,6 +285,5 @@ footer a {
   }
   .app-row .links {
     width: 100%;
-    padding-left: 68px;
   }
 }
