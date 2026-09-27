@@ -1,10 +1,57 @@
-<html>
-  <head>
-    <title>Celal Can Kaya</title>
-  </head>
-  <body>
-    <p>This website has no usage.</p>
-    <p>You can check out my projects on <a href="https://github.com/CelalCanKaya">Github</a> and <a href="https://play.google.com/store/apps/dev?id=6186542380897301429">Play Store</a></p>
-    <p>You can contact with me via <a href="https://www.linkedin.com/in/celalcankaya/">LinkedIn</a></p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CCK Studio</title>
+  <meta name="description" content="CCK Studio - apps, privacy policies, and terms of use." />
+  <link rel="icon" href="assets/img/sliding-puzzle-icon.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <span class="brand">
+        <img src="assets/img/sliding-puzzle-icon.png" alt="" />
+        CCK Studio
+      </span>
+      <span class="pill">Developer Hub</span>
+    </div>
+
+    <div class="card">
+      <h1 style="margin-top:0">Hi, I'm Celal Can Kaya 👋</h1>
+      <p>
+        I build small, independent mobile apps under <strong>CCK Studio</strong>. This page hosts
+        the privacy policy and terms of use for each app, plus links to my other profiles.
+      </p>
+      <p style="display:flex; gap:10px; flex-wrap:wrap; margin-top:18px;">
+        <a class="btn" href="https://play.google.com/store/apps/dev?id=6186542380897301429" target="_blank" rel="noopener">Play Store</a>
+        <a class="btn ghost" href="https://github.com/CelalCanKaya" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/celalcankaya/" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0; border-top:none; padding-top:0;">Apps &amp; legal docs</h2>
+
+      <div class="app-row">
+        <img src="assets/img/sliding-puzzle-icon.png" alt="" />
+        <div class="meta">
+          <h3>Sliding Puzzle</h3>
+          <p>Classic sliding tile puzzle with leaderboards, in Turkish &amp; English.</p>
+        </div>
+        <div class="links">
+          <a href="apps/sliding-puzzle/privacy-policy.html">Privacy Policy</a>
+          <a href="apps/sliding-puzzle/terms-of-use.html">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <span>&copy; <span id="year"></span> CCK Studio</span>
+      <a href="mailto:cckstudio8@gmail.com">cckstudio8@gmail.com</a>
+    </footer>
+  </div>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
 </html>
