@@ -1,5 +1,6 @@
-// Shared EN/TR toggle for legal docs. Defaults to the browser's language,
-// remembers the visitor's choice locally, and falls back to English.
+// Shared EN/TR toggle for legal docs. Priority: a `?lang=` param (set by the app's own
+// in-app link, so it opens in whatever language the app is currently running in) beats a
+// previously-remembered manual choice, which beats the default of English.
 (function () {
   function apply(lang) {
     document.querySelectorAll(".lang-block").forEach(function (el) {
@@ -18,12 +19,18 @@
 
   function initialLang() {
     try {
+      var fromUrl = new URLSearchParams(window.location.search).get("lang");
+      if (fromUrl === "en" || fromUrl === "tr") return fromUrl;
+    } catch (e) {
+      /* ignore */
+    }
+    try {
       var saved = localStorage.getItem("cck-doc-lang");
       if (saved === "en" || saved === "tr") return saved;
     } catch (e) {
       /* ignore */
     }
-    return navigator.language && navigator.language.toLowerCase().indexOf("tr") === 0 ? "tr" : "en";
+    return "en";
   }
 
   document.addEventListener("DOMContentLoaded", function () {
