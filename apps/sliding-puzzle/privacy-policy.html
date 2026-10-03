@@ -21,7 +21,7 @@
       <div class="doc-header">
         <span class="pill">Sliding Puzzle</span>
         <h1><span class="lang-block" data-lang="en">Privacy Policy</span><span class="lang-block" data-lang="tr" hidden>Gizlilik Politikası</span></h1>
-        <p class="updated"><span class="lang-block" data-lang="en">Last updated: September 27, 2026</span><span class="lang-block" data-lang="tr" hidden>Son güncelleme: 27 Eylül 2026</span></p>
+        <p class="updated"><span class="lang-block" data-lang="en">Last updated: October 3, 2026</span><span class="lang-block" data-lang="tr" hidden>Son güncelleme: 3 Ekim 2026</span></p>
       </div>
     </div>
 
@@ -45,22 +45,33 @@
         <p><strong>Gameplay data.</strong> Your best completion times, move counts, and games
         played/solved per board size are saved to our servers under your anonymous identifier, so
         your personal bests and leaderboard rank can be kept in sync.</p>
-        <p><strong>Leaderboard.</strong> Your best time and move count for each board size may be
-        shown publicly to other players, displayed together with the nickname and avatar you
-        chose.</p>
+        <p><strong>Leaderboards.</strong> Your best time and move count for each board size - both
+        all-time and for the current day - may be shown publicly to other players, displayed
+        together with the nickname and avatar you chose.</p>
         <p><strong>Diagnostics &amp; crash data.</strong> We use Firebase Crashlytics, which
         automatically collects crash reports, device model, OS version, and app version to help us
         find and fix bugs.</p>
-        <p><strong>Usage data.</strong> The App uses Firebase Analytics. We do not currently send
-        it any custom events ourselves, but the SDK may automatically collect basic usage
-        information (such as app opens) and associated device identifiers, per Google's standard
-        behavior for that SDK.</p>
+        <p><strong>Usage data.</strong> The App uses Firebase Analytics. Besides the basic usage
+        information the SDK collects automatically (such as app opens) and associated device
+        identifiers, the App sends a small set of events about how it is used: a puzzle being
+        solved (board size, completion time, and move count), a puzzle being restarted, changing
+        the language or theme, changing your avatar, clearing your scores, and an interstitial ad
+        being shown. These events are not linked to your nickname.</p>
+        <p><strong>Configuration &amp; installation identifiers.</strong> The App fetches settings
+        (such as ad configuration) from Firebase Remote Config. Firebase services (Analytics,
+        Crashlytics, Remote Config) use a Firebase installation identifier - a random ID for this
+        installation of the App - to operate.</p>
         <p><strong>Advertising data.</strong> The App displays ads served by Google AdMob. AdMob
         and Google may collect device and advertising identifiers to serve and measure ads. Where
         applicable law requires your consent before personal data is used to personalize ads (for
         example, under the GDPR for users in the EEA, UK, or Switzerland), we will only enable
         personalized ads after obtaining that consent through an appropriate consent mechanism;
-        otherwise, you will be shown non-personalized ads.</p>
+        otherwise, you will be shown non-personalized ads. Where it is shown, you can review or
+        change that choice at any time from <em>Settings &rarr; Privacy Options</em> in the App.
+        On iOS, the App also asks for your permission through Apple's App Tracking Transparency
+        prompt before accessing the Advertising Identifier (IDFA) for tracking; if you decline,
+        the identifier is not used for tracking, and you can change your choice in your device's
+        Settings.</p>
         <p><strong>Support requests.</strong> If you contact us (for example via the in-app
         "Contact &amp; Support" link or by emailing us directly), we receive your email address,
         the content of your message, and - if sent from the in-app link - a short line of app
@@ -68,7 +79,8 @@
         send it.</p>
         <p><strong>Locally-stored preferences.</strong> Settings such as language, theme,
         sound/vibration toggles, and whether you've already seen the in-app tutorial are stored
-        only on your device and are never transmitted to us.</p>
+        on your device. Apart from the analytics events described above (which note when you
+        change the language or theme), these settings are not transmitted to us.</p>
 
         <h2>2. How We Use Information</h2>
         <ul>
@@ -105,6 +117,9 @@
         stored on your device. Uninstalling the App stops all local data collection; server-side
         records tied to your anonymous identifier may still exist until you ask us to delete them.
         To exercise any of the rights below, contact <a href="mailto:cckstudio8@gmail.com">cckstudio8@gmail.com</a>.</p>
+        <p><strong>Deleting your scores in the App.</strong> <em>Settings &rarr; Clear Best Scores</em>
+        resets the statistics stored on your device and deletes your leaderboard entries and
+        statistics records stored on our servers under your anonymous identifier.</p>
         <p><strong>If you are in the EEA, UK, or Switzerland (GDPR/UK GDPR):</strong> you have the
         right to access, correct, delete, restrict, or port your personal data, and to object to
         certain processing. We rely on consent, our legitimate interests (e.g. crash diagnostics,
@@ -172,31 +187,44 @@
         hamle sayınızın ve oynanan/çözülen oyun sayınızın, kişisel rekorlarınızın ve liderlik
         tablosu sıralamanızın senkronize kalabilmesi için anonim kimliğiniz altında
         sunucularımıza kaydedilir.</p>
-        <p><strong>Liderlik tablosu.</strong> Her tahta boyutu için en iyi süreniz ve hamle
-        sayınız, seçtiğiniz takma ad ve avatarla birlikte diğer oyunculara herkese açık şekilde
-        gösterilebilir.</p>
+        <p><strong>Liderlik tabloları.</strong> Her tahta boyutu için en iyi süreniz ve hamle
+        sayınız - hem tüm zamanlar hem de bugün için - seçtiğiniz takma ad ve avatarla birlikte
+        diğer oyunculara herkese açık şekilde gösterilebilir.</p>
         <p><strong>Tanılama ve çökme verileri.</strong> Hataları bulup düzeltmemize yardımcı
         olmak için, çökme raporlarını, cihaz modelini, işletim sistemi sürümünü ve uygulama
         sürümünü otomatik olarak toplayan Firebase Crashlytics'i kullanıyoruz.</p>
-        <p><strong>Kullanım verileri.</strong> Uygulama, Firebase Analytics kullanmaktadır. Şu an
-        kendimiz herhangi bir özel etkinlik göndermiyoruz; ancak bu SDK, Google'ın söz konusu
-        SDK için standart davranışı gereği temel kullanım bilgilerini (uygulama açılışları gibi)
-        ve ilişkili cihaz kimliklerini otomatik olarak toplayabilir.</p>
+        <p><strong>Kullanım verileri.</strong> Uygulama, Firebase Analytics kullanmaktadır. SDK'nın
+        otomatik olarak topladığı temel kullanım bilgilerine (uygulama açılışları gibi) ve
+        ilişkili cihaz kimliklerine ek olarak Uygulama, nasıl kullanıldığına dair az sayıda
+        etkinlik gönderir: bir bulmacanın çözülmesi (tahta boyutu, tamamlama süresi ve hamle
+        sayısı), bir bulmacanın yeniden başlatılması, dil veya temanın değiştirilmesi, avatarın
+        değiştirilmesi, skorların temizlenmesi ve bir geçiş reklamının gösterilmesi. Bu
+        etkinlikler takma adınızla ilişkilendirilmez.</p>
+        <p><strong>Yapılandırma ve kurulum kimlikleri.</strong> Uygulama, ayarları (reklam
+        yapılandırması gibi) Firebase Remote Config'den alır. Firebase hizmetleri (Analytics,
+        Crashlytics, Remote Config), çalışmak için bir Firebase kurulum kimliği - Uygulamanın bu
+        kurulumuna ait rastgele bir kimlik - kullanır.</p>
         <p><strong>Reklam verileri.</strong> Uygulama, Google AdMob tarafından sunulan reklamları
         gösterir. AdMob ve Google, reklamları sunmak ve ölçmek için cihaz ve reklam kimliklerini
         toplayabilir. Yürürlükteki mevzuatın kişisel verilerin reklam kişiselleştirmesinde
         kullanılmadan önce onayınızı gerektirdiği durumlarda (örneğin AB Ekonomik Alanı, Birleşik
         Krallık veya İsviçre'deki kullanıcılar için GDPR kapsamında), kişiselleştirilmiş reklamları
         yalnızca uygun bir onay mekanizmasıyla onayınızı aldıktan sonra etkinleştireceğiz; aksi
-        halde size kişiselleştirilmemiş reklamlar gösterilir.</p>
+        halde size kişiselleştirilmemiş reklamlar gösterilir. Gösterildiği durumlarda bu tercihi,
+        Uygulamadaki <em>Ayarlar &rarr; Gizlilik Seçenekleri</em> bölümünden istediğiniz zaman
+        gözden geçirebilir veya değiştirebilirsiniz. iOS'ta Uygulama ayrıca, takip amacıyla
+        Reklam Tanımlayıcısına (IDFA) erişmeden önce Apple'ın Uygulama İzleme Şeffaflığı (App
+        Tracking Transparency) istemi aracılığıyla izninizi ister; reddederseniz tanımlayıcı
+        takip için kullanılmaz ve tercihinizi cihazınızın Ayarlar bölümünden değiştirebilirsiniz.</p>
         <p><strong>Destek talepleri.</strong> Bizimle iletişime geçerseniz (uygulama içi
         "İletişim ve Destek" bağlantısı ile veya doğrudan e-posta yoluyla), e-posta adresinizi,
         mesajınızın içeriğini ve - uygulama içi bağlantı üzerinden gönderildiyse - e-posta
         taslağına gönderilmeden önce otomatik olarak eklenen kısa bir uygulama sürümü/cihaz bilgisi
         satırını alırız.</p>
         <p><strong>Cihazda saklanan tercihler.</strong> Dil, tema, ses/titreşim ayarları ve
-        uygulama içi öğreticiyi daha önce görüp görmediğiniz gibi ayarlar yalnızca cihazınızda
-        saklanır ve bize hiçbir zaman iletilmez.</p>
+        uygulama içi öğreticiyi daha önce görüp görmediğiniz gibi ayarlar cihazınızda saklanır.
+        Yukarıda açıklanan analitik etkinlikler (dil veya temayı değiştirdiğinizi kaydeder)
+        dışında, bu ayarlar bize iletilmez.</p>
 
         <h2>2. Bilgileri Nasıl Kullanıyoruz</h2>
         <ul>
@@ -236,6 +264,9 @@
         varlığını sürdürebilir. Aşağıdaki haklardan herhangi birini kullanmak için
         <a href="mailto:cckstudio8@gmail.com">cckstudio8@gmail.com</a> adresinden bizimle iletişime
         geçin.</p>
+        <p><strong>Skorlarınızı Uygulamada silme.</strong> <em>Ayarlar &rarr; En İyi Skorları
+        Temizle</em>, cihazınızda saklanan istatistikleri sıfırlar ve anonim kimliğiniz altında
+        sunucularımızda saklanan liderlik tablosu girdilerinizi ve istatistik kayıtlarınızı siler.</p>
         <p><strong>AB Ekonomik Alanı, Birleşik Krallık veya İsviçre'deyseniz (GDPR/UK GDPR):</strong>
         kişisel verilerinize erişme, düzeltme, silme, işlemeyi kısıtlama veya taşıma ve belirli
         işlemlere itiraz etme hakkına sahipsiniz. Hukuki dayanak olarak rızanıza, meşru
