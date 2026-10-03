@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-title-en="CCK Studio" data-title-tr="CCK Studio">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,14 +11,23 @@
   <div class="wrap">
     <div class="topbar">
       <span class="brand">CCK Studio</span>
-      <span class="pill">Developer Hub</span>
+      <span class="pill"><span class="lang-block" data-lang="en">Developer Hub</span><span class="lang-block" data-lang="tr" hidden>Geliştirici Merkezi</span></span>
+      <div class="lang-toggle">
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="tr">TR</button>
+      </div>
     </div>
 
     <div class="card">
-      <h1 style="margin-top:0">Hi, I'm Celal Can Kaya 👋</h1>
-      <p>
+      <h1 style="margin-top:0"><span class="lang-block" data-lang="en">Hi, I'm Celal Can Kaya 👋</span><span class="lang-block" data-lang="tr" hidden>Merhaba, ben Celal Can Kaya 👋</span></h1>
+      <p class="lang-block" data-lang="en">
         I build small, independent mobile apps under <strong>CCK Studio</strong>. This page hosts
         the privacy policy and terms of use for each app, plus links to my other profiles.
+      </p>
+      <p class="lang-block" data-lang="tr" hidden>
+        <strong>CCK Studio</strong> adı altında küçük, bağımsız mobil uygulamalar geliştiriyorum.
+        Bu sayfa her uygulamanın gizlilik politikasını ve kullanım şartlarını, ayrıca diğer
+        profillerimin bağlantılarını barındırır.
       </p>
       <p style="display:flex; gap:10px; flex-wrap:wrap; margin-top:18px;">
         <a class="btn" href="https://play.google.com/store/apps/dev?id=6186542380897301429" target="_blank" rel="noopener">Play Store</a>
@@ -28,17 +37,18 @@
     </div>
 
     <div class="card">
-      <h2 style="margin-top:0; border-top:none; padding-top:0;">Apps &amp; legal docs</h2>
+      <h2 style="margin-top:0; border-top:none; padding-top:0;"><span class="lang-block" data-lang="en">Apps &amp; legal docs</span><span class="lang-block" data-lang="tr" hidden>Uygulamalar ve yasal belgeler</span></h2>
 
       <div class="app-row">
         <img class="icon" src="assets/icons/sliding-puzzle.png" alt="Sliding Puzzle app icon" width="48" height="48" />
         <div class="meta">
           <h3>Sliding Puzzle</h3>
-          <p>Classic sliding tile puzzle with leaderboards, in Turkish &amp; English.</p>
+          <p class="lang-block" data-lang="en">Classic sliding tile puzzle with leaderboards, in Turkish &amp; English.</p>
+          <p class="lang-block" data-lang="tr" hidden>Liderlik tablolu klasik kaydırmalı bulmaca, Türkçe ve İngilizce.</p>
         </div>
         <div class="links">
-          <a href="apps/sliding-puzzle/privacy-policy.html">Privacy Policy</a>
-          <a href="apps/sliding-puzzle/terms-of-use.html">Terms of Use</a>
+          <a href="apps/sliding-puzzle/privacy-policy.html"><span class="lang-block" data-lang="en">Privacy Policy</span><span class="lang-block" data-lang="tr" hidden>Gizlilik Politikası</span></a>
+          <a href="apps/sliding-puzzle/terms-of-use.html"><span class="lang-block" data-lang="en">Terms of Use</span><span class="lang-block" data-lang="tr" hidden>Kullanım Şartları</span></a>
         </div>
       </div>
     </div>
@@ -48,6 +58,7 @@
       <a href="mailto:cckstudio8@gmail.com">cckstudio8@gmail.com</a>
     </footer>
   </div>
+  <script src="assets/js/lang-toggle.js"></script>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

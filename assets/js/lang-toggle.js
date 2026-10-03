@@ -1,6 +1,6 @@
-// Shared EN/TR toggle for legal docs. Priority: a `?lang=` param (set by the app's own
+// Shared EN/TR toggle for the home page and legal docs. Priority: a `?lang=` param (set by the app's own
 // in-app link, so it opens in whatever language the app is currently running in) beats a
-// previously-remembered manual choice, which beats the default of English.
+// previously-remembered manual choice, which beats the browser language (Turkish or English).
 (function () {
   function apply(lang) {
     document.querySelectorAll(".lang-block").forEach(function (el) {
@@ -10,6 +10,9 @@
       btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
     });
     document.documentElement.setAttribute("lang", lang);
+    // Pages that set data-title-en / data-title-tr on <html> get a matching <title> per language.
+    var title = document.documentElement.getAttribute("data-title-" + lang);
+    if (title) document.title = title;
     try {
       localStorage.setItem("cck-doc-lang", lang);
     } catch (e) {
@@ -30,7 +33,8 @@
     } catch (e) {
       /* ignore */
     }
-    return "en";
+    // First visit with nothing chosen: follow the browser language (Turkish -> tr, else en).
+    return /^tr/i.test(navigator.language || "") ? "tr" : "en";
   }
 
   document.addEventListener("DOMContentLoaded", function () {
