@@ -61,8 +61,20 @@
         information the SDK collects automatically (such as app opens) and associated device
         identifiers, the App sends a small set of events about how it is used: a puzzle being
         solved (board size, completion time, and move count), a puzzle being restarted, changing
-        the language or theme, changing your avatar, clearing your scores, and an interstitial ad
-        being shown. These events are not linked to your nickname.</p>
+        the language or theme, changing how tile colors are arranged, changing your avatar,
+        clearing your scores, how you answer the notification prompt, and an interstitial ad
+        being shown. The App also sets two Analytics user properties: the app language (Turkish
+        or English) and a rough experience level based on how many puzzles you have solved
+        (new, casual, regular, or pro), which we use to decide who receives which notification.
+        These events and properties are not linked to your nickname.</p>
+        <p><strong>Push notifications.</strong> The App uses Firebase Cloud Messaging, which
+        assigns a registration token to this installation (on iOS, together with the device token
+        from Apple's Push Notification service once you allow notifications). If you allow
+        notifications - the App asks once, and your device then asks you to confirm - the App
+        subscribes the installation to a topic that matches the app language, so that we can send
+        you messages in the right language. We use notifications only for news and updates about
+        the App. You can turn them off at any time in your device's notification settings. If you
+        decline, the App does not subscribe to any topic and we do not send you notifications.</p>
         <p><strong>Configuration &amp; installation identifiers.</strong> The App fetches settings
         (such as ad configuration) from Firebase Remote Config. Firebase services (Analytics,
         Crashlytics, Remote Config) use a Firebase installation identifier - a random ID for this
@@ -84,8 +96,9 @@
         version and device information that is added to the email draft automatically before you
         send it.</p>
         <p><strong>Locally-stored preferences.</strong> Settings such as language, theme,
-        sound/vibration toggles, and whether you've already seen the in-app tutorial are stored
-        on your device. Apart from the analytics events described above (which note when you
+        sound/vibration toggles, whether you've already seen the in-app tutorial or answered the
+        notification prompt, and the total time you have spent in the App (used only on your
+        device to decide when to offer the notification prompt) are stored on your device. Apart from the analytics events described above (which note when you
         change the language or theme), these settings are not transmitted to us.</p>
 
         <h2>2. How We Use Information</h2>
@@ -93,6 +106,7 @@
           <li>Provide core gameplay features: save your progress and best scores, and power the leaderboard.</li>
           <li>Diagnose crashes and fix bugs.</li>
           <li>Respond to support requests you send us.</li>
+          <li>Send you news and updates about the App as notifications, if you allow them.</li>
           <li>Display ads, and measure or personalize them where legally permitted.</li>
           <li>Comply with applicable legal obligations.</li>
         </ul>
@@ -101,7 +115,8 @@
         <p>We do not sell your personal information. We share information with service providers
         who process it on our behalf, strictly to operate the App:</p>
         <ul>
-          <li><strong>Google Firebase</strong> (Authentication, Firestore database, Remote Config, Crashlytics, Analytics)</li>
+          <li><strong>Google Firebase</strong> (Authentication, Firestore database, Remote Config, Crashlytics, Analytics, Cloud Messaging)</li>
+          <li><strong>Apple Push Notification service</strong> (delivering notifications on iOS)</li>
           <li><strong>Google AdMob</strong> (advertising)</li>
         </ul>
         <p>These providers process data under their own privacy policies:
@@ -209,9 +224,21 @@
         otomatik olarak topladığı temel kullanım bilgilerine (uygulama açılışları gibi) ve
         ilişkili cihaz kimliklerine ek olarak Uygulama, nasıl kullanıldığına dair az sayıda
         etkinlik gönderir: bir bulmacanın çözülmesi (tahta boyutu, tamamlama süresi ve hamle
-        sayısı), bir bulmacanın yeniden başlatılması, dil veya temanın değiştirilmesi, avatarın
-        değiştirilmesi, skorların temizlenmesi ve bir geçiş reklamının gösterilmesi. Bu
-        etkinlikler takma adınızla ilişkilendirilmez.</p>
+        sayısı), bir bulmacanın yeniden başlatılması, dil veya temanın değiştirilmesi, karo
+        renklerinin düzeninin değiştirilmesi, avatarın değiştirilmesi, skorların temizlenmesi,
+        bildirim istemine verdiğiniz yanıt ve bir geçiş reklamının gösterilmesi. Uygulama ayrıca
+        iki Analytics kullanıcı özelliği belirler: uygulama dili (Türkçe veya İngilizce) ve kaç
+        bulmaca çözdüğünüze göre kabaca bir deneyim düzeyi (yeni, ara sıra, düzenli veya usta);
+        bunları kimin hangi bildirimi alacağına karar vermek için kullanırız. Bu etkinlikler ve
+        özellikler takma adınızla ilişkilendirilmez.</p>
+        <p><strong>Anlık bildirimler.</strong> Uygulama, bu kuruluma bir kayıt belirteci atayan
+        Firebase Cloud Messaging'i kullanır (iOS'ta, bildirimlere izin verdiğinizde Apple'ın Push
+        Notification servisinden gelen cihaz belirteciyle birlikte). Bildirimlere izin verirseniz
+        - Uygulama bir kez sorar, ardından cihazınız onayınızı ister - Uygulama, size doğru dilde
+        mesaj gönderebilmemiz için kurulumu uygulama diline uyan bir konuya abone eder.
+        Bildirimleri yalnızca Uygulama hakkındaki haberler ve güncellemeler için kullanırız.
+        Bildirimleri istediğiniz zaman cihazınızın bildirim ayarlarından kapatabilirsiniz. İzin
+        vermezseniz Uygulama hiçbir konuya abone olmaz ve size bildirim göndermeyiz.</p>
         <p><strong>Yapılandırma ve kurulum kimlikleri.</strong> Uygulama, ayarları (reklam
         yapılandırması gibi) Firebase Remote Config'den alır. Firebase hizmetleri (Analytics,
         Crashlytics, Remote Config), çalışmak için bir Firebase kurulum kimliği - Uygulamanın bu
@@ -234,7 +261,9 @@
         taslağına gönderilmeden önce otomatik olarak eklenen kısa bir uygulama sürümü/cihaz bilgisi
         satırını alırız.</p>
         <p><strong>Cihazda saklanan tercihler.</strong> Dil, tema, ses/titreşim ayarları ve
-        uygulama içi öğreticiyi daha önce görüp görmediğiniz gibi ayarlar cihazınızda saklanır.
+        uygulama içi öğreticiyi veya bildirim istemini daha önce görüp görmediğiniz ve Uygulamada
+        geçirdiğiniz toplam süre (yalnızca bildirim isteminin ne zaman sunulacağına cihazınızda
+        karar vermek için kullanılır) gibi bilgiler cihazınızda saklanır.
         Yukarıda açıklanan analitik etkinlikler (dil veya temayı değiştirdiğinizi kaydeder)
         dışında, bu ayarlar bize iletilmez.</p>
 
@@ -243,6 +272,7 @@
           <li>Temel oyun özelliklerini sağlamak: ilerlemenizi ve en iyi skorlarınızı kaydetmek, liderlik tablosunu çalıştırmak.</li>
           <li>Çökmeleri teşhis etmek ve hataları düzeltmek.</li>
           <li>Bize gönderdiğiniz destek taleplerine yanıt vermek.</li>
+          <li>İzin vermeniz halinde, Uygulama hakkındaki haberleri ve güncellemeleri bildirim olarak göndermek.</li>
           <li>Reklam göstermek ve yasal olarak izin verilen durumlarda ölçmek veya kişiselleştirmek.</li>
           <li>Yürürlükteki yasal yükümlülüklere uymak.</li>
         </ul>
@@ -251,7 +281,8 @@
         <p>Kişisel bilgilerinizi satmıyoruz. Uygulamayı işletmek amacıyla, bilgileri bizim adımıza
         işleyen hizmet sağlayıcılarla paylaşıyoruz:</p>
         <ul>
-          <li><strong>Google Firebase</strong> (Authentication, Firestore veritabanı, Remote Config, Crashlytics, Analytics)</li>
+          <li><strong>Google Firebase</strong> (Authentication, Firestore veritabanı, Remote Config, Crashlytics, Analytics, Cloud Messaging)</li>
+          <li><strong>Apple Push Notification service</strong> (iOS'ta bildirimlerin iletilmesi)</li>
           <li><strong>Google AdMob</strong> (reklamcılık)</li>
         </ul>
         <p>Bu sağlayıcılar verileri kendi gizlilik politikaları kapsamında işler:
