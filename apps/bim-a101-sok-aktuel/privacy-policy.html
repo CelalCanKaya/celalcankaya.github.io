@@ -21,7 +21,7 @@
       <div class="doc-header">
         <span class="pill" lang="tr">Bim A101 Şok Aktüel Ürünler</span>
         <h1><span class="lang-block" data-lang="en">Privacy Policy</span><span class="lang-block" data-lang="tr" hidden>Gizlilik Politikası</span></h1>
-        <p class="updated"><span class="lang-block" data-lang="en">Last updated: November 21, 2026</span><span class="lang-block" data-lang="tr" hidden>Son güncelleme: 21 Kasım 2026</span></p>
+        <p class="updated"><span class="lang-block" data-lang="en">Last updated: November 25, 2026</span><span class="lang-block" data-lang="tr" hidden>Son güncelleme: 25 Kasım 2026</span></p>
       </div>
     </div>
 
@@ -64,8 +64,13 @@
         version to help us find and fix bugs.</p>
         <p><strong>Usage data.</strong> The App uses Firebase Analytics with its default,
         automatically collected events (such as app opens, screen views, and session length)
-        and associated device identifiers. The App does not send custom events about which
-        catalogs you open, favorite, or set reminders for.</p>
+        and associated device identifiers. It also sends events about how the App's features
+        are used: which market you pick, which catalog you open and from where, how many of its
+        pages you view and for how long, when you add or remove a favorite or a reminder,
+        whether you allow notifications, and whether you respond to the update and review
+        cards. These events contain only the market, the catalog's identifier and label, and
+        counts; they do not contain your name, contact details, or location. We use them only
+        in aggregate, to understand and improve the App.</p>
         <p><strong>Catalog reminders.</strong> When you set a reminder for a catalog that has not
         started yet, the App schedules it with your device's alarm system and shows a
         notification on the catalog's first day. Reminders are created and delivered entirely on
@@ -80,8 +85,10 @@
         Config. Firebase services (Analytics, Crashlytics, Remote Config, Cloud Messaging) use a
         Firebase installation identifier - a random ID for this installation of the App - to
         operate.</p>
-        <p><strong>Advertising data.</strong> The App shows banner and full-screen ads served by
-        Google AdMob. AdMob and Google may collect device information and your device's
+        <p><strong>Advertising data.</strong> The App shows banner, native (shown between
+        catalog cards and catalog pages, marked "Reklam") and full-screen ads served through
+        Google AdMob. Through AdMob mediation, Unity Ads may also bid for and serve some of these
+        ads. AdMob, Google and Unity may collect device information and your device's
         advertising identifier to serve, measure, and, where permitted, personalize ads. If you
         are in the EEA, the UK, or Switzerland, the App shows Google's consent form (through
         Google's User Messaging Platform) when you first open it, and ads are requested only after
@@ -113,11 +120,13 @@
         <ul>
           <li><strong>Google Firebase</strong> (Cloud Storage, Cloud Firestore, Remote Config, Crashlytics, Analytics, Cloud Messaging)</li>
           <li><strong>Google AdMob</strong> (advertising)</li>
+          <li><strong>Unity Ads</strong> (advertising, through AdMob mediation)</li>
         </ul>
         <p>These providers process data under their own privacy policies:
           <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>,
           <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy &amp; Security</a>,
-          <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from partner sites/apps</a>.
+          <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from partner sites/apps</a>,
+          <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity Privacy Policy</a>.
         </p>
         <p>We do not share any information with BİM, A101, or ŞOK. We may disclose information if
         required by law, legal process, or to protect our rights, users, or the public.</p>
@@ -151,7 +160,7 @@
         regardless of location - just get in touch.</p>
 
         <h2>6. International Data Transfers</h2>
-        <p>Our service providers (Google/Firebase/AdMob) may process and store data in the United
+        <p>Our service providers (Google/Firebase/AdMob, Unity) may process and store data in the United
         States and other countries where they operate data centers, under appropriate safeguards
         such as Standard Contractual Clauses, as described in their own privacy policies.</p>
 
@@ -213,8 +222,14 @@
         sürümünü otomatik olarak toplayan Firebase Crashlytics'i kullanıyoruz.</p>
         <p><strong>Kullanım verileri.</strong> Uygulama, Firebase Analytics'i varsayılan, otomatik
         toplanan etkinlikleriyle (uygulama açılışları, ekran görüntülemeleri ve oturum süresi gibi)
-        ve ilişkili cihaz kimlikleriyle kullanır. Uygulama, hangi katalogları açtığınıza,
-        favorilerinize eklediğinize veya hatırlatma kurduğunuza dair özel bir etkinlik göndermez.</p>
+        ve ilişkili cihaz kimlikleriyle kullanır. Ayrıca Uygulamanın özelliklerinin nasıl
+        kullanıldığına dair etkinlikler gönderir: hangi marketi seçtiğiniz, hangi kataloğu ve
+        nereden açtığınız, kataloğun kaç sayfasını ne kadar süre görüntülediğiniz, favori veya
+        hatırlatma ekleyip kaldırdığınız, bildirimlere izin verip vermediğiniz ve güncelleme ile
+        değerlendirme kartlarına verdiğiniz yanıt. Bu etkinlikler yalnızca marketi, kataloğun
+        kimliğini ve etiketini ve sayıları içerir; adınızı, iletişim bilgilerinizi veya
+        konumunuzu içermez. Bunları yalnızca toplu olarak, Uygulamayı anlamak ve geliştirmek
+        için kullanırız.</p>
         <p><strong>Katalog hatırlatmaları.</strong> Henüz başlamamış bir katalog için hatırlatma
         kurduğunuzda, Uygulama bunu cihazınızın alarm sistemiyle planlar ve katalogun ilk günü
         bir bildirim gösterir. Hatırlatmalar tamamen cihazınızda oluşturulur ve gösterilir;
@@ -229,10 +244,12 @@
         alır. Firebase hizmetleri (Analytics, Crashlytics, Remote Config, Cloud Messaging),
         çalışmak için bir Firebase kurulum kimliği - Uygulamanın bu kurulumuna ait rastgele bir
         kimlik - kullanır.</p>
-        <p><strong>Reklam verileri.</strong> Uygulama, Google AdMob tarafından sunulan banner ve
-        tam ekran reklamlar gösterir. AdMob ve Google, reklamları sunmak, ölçmek ve izin verilen
-        durumlarda kişiselleştirmek için cihaz bilgilerini ve cihazınızın reklam kimliğini
-        toplayabilir. AB Ekonomik Alanı, Birleşik Krallık veya İsviçre'deyseniz, Uygulama ilk
+        <p><strong>Reklam verileri.</strong> Uygulama, Google AdMob aracılığıyla sunulan banner,
+        yerel (katalog kartları ve katalog sayfaları arasında gösterilen, "Reklam" olarak
+        işaretli) ve tam ekran reklamlar gösterir. AdMob uyumlulaştırması (mediation) yoluyla bu
+        reklamların bir kısmı için Unity Ads de teklif verebilir ve reklam sunabilir. AdMob,
+        Google ve Unity, reklamları sunmak, ölçmek ve izin verilen durumlarda kişiselleştirmek
+        için cihaz bilgilerini ve cihazınızın reklam kimliğini toplayabilir. AB Ekonomik Alanı, Birleşik Krallık veya İsviçre'deyseniz, Uygulama ilk
         açılışta Google'ın onay formunu (Google'ın User Messaging Platform'u aracılığıyla)
         gösterir ve reklamlar ancak siz seçiminizi yaptıktan sonra istenir; bu seçimi istediğiniz
         zaman Uygulamadaki <em>Hakkında &rarr; Gizlilik Seçenekleri</em> bölümünden gözden
@@ -263,11 +280,13 @@
         <ul>
           <li><strong>Google Firebase</strong> (Cloud Storage, Cloud Firestore, Remote Config, Crashlytics, Analytics, Cloud Messaging)</li>
           <li><strong>Google AdMob</strong> (reklamcılık)</li>
+          <li><strong>Unity Ads</strong> (reklamcılık, AdMob uyumlulaştırması aracılığıyla)</li>
         </ul>
         <p>Bu sağlayıcılar verileri kendi gizlilik politikaları kapsamında işler:
           <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a>,
           <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Gizlilik ve Güvenlik</a>,
-          <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google'ın ortak site/uygulamalardan gelen bilgileri nasıl kullandığı</a>.
+          <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google'ın ortak site/uygulamalardan gelen bilgileri nasıl kullandığı</a>,
+          <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity Gizlilik Politikası</a>.
         </p>
         <p>BİM, A101 veya ŞOK ile hiçbir bilgi paylaşmayız. Yasa, yasal süreç gereği veya
         haklarımızı, kullanıcılarımızı ya da kamuyu korumak amacıyla bilgi açıklayabiliriz.</p>
@@ -305,7 +324,7 @@
         geçmeniz yeterli.</p>
 
         <h2>6. Uluslararası Veri Aktarımları</h2>
-        <p>Hizmet sağlayıcılarımız (Google/Firebase/AdMob), verileri kendi gizlilik politikalarında
+        <p>Hizmet sağlayıcılarımız (Google/Firebase/AdMob, Unity), verileri kendi gizlilik politikalarında
         açıklandığı üzere Standart Sözleşme Hükümleri gibi uygun güvencelerle, veri merkezlerinin
         bulunduğu Amerika Birleşik Devletleri ve diğer ülkelerde işleyebilir ve depolayabilir.</p>
 
